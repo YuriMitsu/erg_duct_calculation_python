@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 # %%
-data = pd.read_csv('/Users/ampuku/Documents/duct/code/python/dep_evens_v2.csv')
+data = pd.read_csv('/Users/ampuku/Documents/duct/code/python/dep_evens.csv')
 
 # %%
 # timespan, '2017-07-14/02:40:00', 20, /minute
