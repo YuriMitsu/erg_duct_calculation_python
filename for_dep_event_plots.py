@@ -11,7 +11,7 @@ data = pd.read_csv('/Users/ampuku/Documents/duct/code/python/dep_evens.csv')
 # plot_kpara_ne, duct_time='2017-07-14/02:51:50', focus_f=[2., 3., 4., 5.], UHR_file_name='kuma', duct_wid_data_n=6, IorD='D' ; D
 
 
-texts = '\n; コンパイル\n; .compile -v \'/Users/ampuku/Documents/duct/code/IDL/for_event_analysis/memo_dep_event_duct_time.pro\'\n\npro memo_decrease_duct_time\n'
+texts = '\n; コンパイル\n; .compile -v \'/Users/ampuku/Documents/duct/code/IDL/for_event_plots/memo_dep_event_duct_time.pro\'\n\npro memo_decrease_duct_time\n'
 
 for i in range(len(data)):
     if i == 0 or (data.start_time[i] != data.start_time[i-1] and not isinstance(data.start_time[i], float)):
@@ -42,6 +42,6 @@ f = open('test.txt', 'w', encoding='UTF-8')
 f.writelines(texts)
 f.close()
 # %%
-os.rename('test.txt', '/Users/ampuku/Documents/duct/code/IDL/for_event_analysis/memo_dep_event_duct_time.pro')
+os.rename('test.txt', '/Users/ampuku/Documents/duct/code/IDL/for_event_plots/memo_dep_event_duct_time.pro')
 
 # %%
