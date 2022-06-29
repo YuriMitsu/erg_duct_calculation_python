@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 # %%
-data = pd.read_csv('dep_evens.csv')
+data = pd.read_csv('/Users/ampuku/Documents/duct/code/python/dep_evens_v2.csv')
 
 # %%
 # timespan, '2017-07-14/02:40:00', 20, /minute
@@ -17,19 +17,20 @@ for i in range(len(data)):
     if i == 0 or (data.start_time[i] != data.start_time[i-1] and not isinstance(data.start_time[i], float)):
         text = '\n    timespan, \'' + str(data.start_time[i]) + '\', ' + str(data.range_min[i]) + \
             ', /minute \n    plot_event_normal, UHR_file_name=\'' + \
-            data.UHR_file_name[i] + '\'\n'
+            str(data.UHR_file_name[i]) + '\'\n'
         texts += text
-    text = '    plot_kpara_ne, duct_time=\'' + data.duct_time[i] + '\', focus_f=' + \
-        data.forcus_f[i] + ', UHR_file_name=\'' + data.UHR_file_name[i] + \
-        '\', duct_wid_data_n=' + \
-        str(data.duct_wid_data_n[i]) + ', IorD=\'' + data.IorD[i]
-    texts += text
-    if not isinstance(data.lsm[i], float):
-        text = '\', lsm=' + str(data.lsm[i]) + '\n'
+    if isinstance(data.duct_time[i], str):
+        text = '    plot_kpara_ne, duct_time=\'' + str(data.duct_time[i]) + '\', focus_f=' + \
+            str(data.forcus_f[i]) + ', UHR_file_name=\'' + str(data.UHR_file_name[i]) + \
+            '\', duct_wid_data_n=' + \
+            str(data.duct_wid_data_n[i]) + ', IorD=\'' + str(data.IorD[i])
         texts += text
-    else:
-        text = '\'\n'
-        texts += text
+        if not isinstance(data.lsm[i], float):
+            text = '\', lsm=' + str(data.lsm[i]) + '\n'
+            texts += text
+        else:
+            text = '\n'
+            texts += text
 
 texts += '\n\nend'
 
