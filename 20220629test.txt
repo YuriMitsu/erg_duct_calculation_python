@@ -1,0 +1,26 @@
+./fufp3-txt 20170411 > txt/2017/erg_hfa_l3_high_20170411.txt
+./fufp3-txt 20170412 > txt/2017/erg_hfa_l3_high_20170412.txt
+./fufp3-txt 20170510 > txt/2017/erg_hfa_l3_high_20170510.txt
+./fufp3-txt 20170515 > txt/2017/erg_hfa_l3_high_20170515.txt
+./fufp3-txt 20170522 > txt/2017/erg_hfa_l3_high_20170522.txt
+./fufp3-txt 20170526 > txt/2017/erg_hfa_l3_high_20170526.txt
+./fufp3-txt 20170526 > txt/2017/erg_hfa_l3_high_20170526.txt
+./fufp3-txt 20170530 > txt/2017/erg_hfa_l3_high_20170530.txt
+./fufp3-txt 20170627 > txt/2017/erg_hfa_l3_high_20170627.txt
+./fufp3-txt 20170703 > txt/2017/erg_hfa_l3_high_20170703.txt
+./fufp3-txt 20170714 > txt/2017/erg_hfa_l3_high_20170714.txt
+./fufp3-txt 20170726 > txt/2017/erg_hfa_l3_high_20170726.txt
+
+./fufp3-txt 20180519 > txt/2018/erg_hfa_l3_high_20180519.txt
+./fufp3-txt 20180526 > txt/2018/erg_hfa_l3_high_20180526.txt
+
+
+# コアダンプ
+./fufp3-txt 20170622 > txt/2017/erg_hfa_l3_high_20170622.txt
+./fufp3-txt 20170629 > txt/2017/erg_hfa_l3_high_20170629.txt
+./fufp3-txt 20180405 > txt/2018/erg_hfa_l3_high_20180405.txt
+./fufp3-txt 20180420 > txt/2018/erg_hfa_l3_high_20180420.txt
+./fufp3-txt 20180421 > txt/2018/erg_hfa_l3_high_20180421.txt
+
+# 変なのできてた
+erg_hfa_l3_high_20170627.tx
