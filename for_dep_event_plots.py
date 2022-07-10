@@ -2,7 +2,7 @@
 import os
 import pandas as pd
 
-data = pd.read_csv('/Users/ampuku/Documents/duct/code/python/dep_evens.csv')
+data = pd.read_csv('/Users/ampuku/Documents/duct/code/python/dep_events.csv')
 
 # timespan, '2017-07-14/02:40:00', 20, /minute
 # plot_event_normal, UHR_file_name='kuma'
