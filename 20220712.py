@@ -16,44 +16,7 @@ from sklearn.datasets import make_regression
 
 
 # %%
-data = pd.read_csv('/Users/ampuku/Documents/duct/code/python/dep_events.csv')
-
-# %%
-# pro ファイルの作成、読めなくてよし、ひとまず実行できるやつ
-# '/Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/test_list.pro'
-
-# texts = 'pro test_list\n'
-
-# for i in range(len(data)):
-#     if i == 0 or (data.start_time[i] != data.start_time[i-1] and not isinstance(data.start_time[i], float)):
-#         text = '\n    timespan, \'' + str(data.start_time[i]) + '\', ' + str(data.range_min[i]) + \
-#             ', /minute \n    test_20220711\n'
-#         texts += text
-
-# texts += '\nend'
-# # texts
-# # %%
-
-# f = open('/Users/ampuku/Documents/duct/code/python/test_20220711.txt','w', encoding='UTF-8')
-# f.writelines(texts)
-# f.close()
-# os.rename('/Users/ampuku/Documents/duct/code/python/test_20220711.txt','/Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/test_list.pro')
-
-
-# %%
-# idlで実行してtplot変数を作成する！ここ時間がかかる..中でSVD法が動いている..
-# idl
-# erg_init
-# .compile -v '/Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/test_20220711.pro'
-# .compile -v '/Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/test_list.pro'
-# test_list
-
-# %%
 # 関数たち
-
-# def idx_of_the_nearest(data, value):
-#     idx = np.argmin(np.abs(data - value))
-#     return idx
 
 def calc_lsm_from_kpara(time,kpara_data,v,duct_time,duct_wid_data_n,forcus_f):
 
@@ -67,8 +30,8 @@ def calc_lsm_from_kpara(time,kpara_data,v,duct_time,duct_wid_data_n,forcus_f):
 
     forcus_f_sp = forcus_f[1:-1].split(',')
     print(forcus_f_sp)
-    forcus_f_min = int(forcus_f_sp[0][0:-1])
-    forcus_f_max = int(forcus_f_sp[-1][0:-1])
+    forcus_f_min = float(forcus_f_sp[0][0:-1])
+    forcus_f_max = float(forcus_f_sp[-1][0:-1])
 
     idx_fmin = np.argmin(np.abs(v - forcus_f_min))
     idx_fmax = np.argmin(np.abs(v - forcus_f_max))
@@ -120,14 +83,17 @@ def LAM_test(x,y):
 
 
 # %%
+data = pd.read_csv('/Users/ampuku/Documents/duct/code/python/dep_events.csv')
+
 # nums = np.array(range(1,27,1)+range(29,len(data.start_time),1))
-# nums = np.hstack([ np.arange(1,4,1,'int') ,np.arange(5,27,1,'int'), np.arange(29,35,1,'int') ,np.arange(36,42,1,'int') ])
-# nums = np.arange(36,42,1,'int')
 nums = np.array([35])
 
+# for i in nums:
+#     print(data.iloc[i])
+# data.iloc[nums]
 
+# %%
 for i in nums:
-    if not isinstance(data.duct_time[i], float):
         st = data.start_time[i]
         file_name = '/Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/'+st[0:4]+st[5:7]+st[8:10]+st[11:13]+st[14:16]+st[17:19]+'kpara_LASVD_ma3_mask.tplot'
         pytplot.tplot_restore(file_name)
@@ -137,12 +103,8 @@ for i in nums:
         kpara_data = pytplot.get_data('kpara_LASVD_ma3_mask')
         lam = calc_lsm_from_kpara(kpara_data.times,kpara_data.y,kpara_data.v,dim.duct_time,dim.duct_wid_data_n,dim.forcus_f)
         data.lsm[i] = lam
-    else:
-        data.lsm[i] = lam
+
 
 # %%
-data.to_csv('/Users/ampuku/Documents/duct/code/python/events.csv', index=False)
-
-
-
+data.lsm[39]
 # %%

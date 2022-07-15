@@ -16,18 +16,18 @@ texts += '\n\npro memo_dep_event_duct_time\n'
 for i in range(len(data)):
     if i == 0 or (data.start_time[i] != data.start_time[i-1] and not isinstance(data.start_time[i], float)):
         text = '\n    timespan, \'' + str(data.start_time[i]) + '\', ' + str(data.range_min[i]) + \
-            ', /minute \n    ;plot_event_normal, UHR_file_name=\'' + \
+            ', /minute \n    plot_event_normal, UHR_file_name=\'' + \
             str(data.UHR_file_name[i]) + '\'\n'
         texts += text
     if isinstance(data.duct_time[i], str):
-        text = '    event_analysis_duct, duct_time=\'' + str(data.duct_time[i]) + '\', focus_f=' + \
+        text = '    ;event_analysis_duct, duct_time=\'' + str(data.duct_time[i]) + '\', focus_f=' + \
             str(data.forcus_f[i]) + ', UHR_file_name=\'' + str(data.UHR_file_name[i]) + \
             '\', duct_wid_data_n=' + \
             str(data.duct_wid_data_n[i]) + \
             ', IorD=\'' + str(data.IorD[i]) + '\''
         texts += text
         if not isinstance(data.lsm[i], float):
-            text = '\', lsm=' + str(data.lsm[i]) + '\n'
+            text = ', lsm=' + str(data.lsm[i]) + '\n'
             texts += text
         else:
             text = '\n'
@@ -36,9 +36,11 @@ for i in range(len(data)):
 texts += '\n\nend'
 # texts
 
-f = open('/Users/ampuku/Documents/duct/code/python/test.txt','w', encoding='UTF-8')
+f = open('/Users/ampuku/Documents/duct/code/python/test.txt',
+         'w', encoding='UTF-8')
 f.writelines(texts)
 f.close()
-os.rename('/Users/ampuku/Documents/duct/code/python/test.txt','/Users/ampuku/Documents/duct/code/IDL/for_event_analysis__lists/memo_dep_event_duct_time.pro')
+os.rename('/Users/ampuku/Documents/duct/code/python/test.txt',
+          '/Users/ampuku/Documents/duct/code/IDL/for_event_analysis__lists/memo_dep_event_duct_time.pro')
 
 # %%
