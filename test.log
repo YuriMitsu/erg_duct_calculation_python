@@ -1,0 +1,515 @@
+Time range set from 2017-04-01/01:45:00 to 2017-04-01/02:00:00
+Warning: No Root Data Directory has been defined! Using default: "/Users/ampuku/data/" (Which might change in the future!)
+To define the Root Data Directory, see documentation in /Users/ampuku/IDLplagin/spedas_4_1/idl/general/misc/root_data_dir.pro
+ERG_INIT(86): 
+CDF_VERSION = STRING   = '3.6.31'
+The version of the CDF library should be 3.6.3.1 or newer
+to read a CDF file after the recent leap second time (2017.1.1).
+SPD_DOWNLOAD_FILE(221): Downloading: https://cdf.gsfc.nasa.gov/html/CDFLeapSeconds.txt
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/misc/CDFLeapSeconds.txt
+!erg = RETRIEVE_STRUCT --(23 Tags/136 Bytes)-->
+   INIT            = 1
+   LOCAL_DATA_DIR  = '/Users/ampuku/data/ergsc/'
+   REMOTE_DATA_DIR = 'https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/'
+   PROGRESS        = 1
+   USER_AGENT      = ''
+   FILE_MODE       = 438
+   DIR_MODE        = 511
+   PRESERVE_MTIME  = 0
+   PROGOBJ         = <DATA            OBJREF    = <NullObject>>
+   MIN_AGE_LIMIT   = 300
+   NO_SERVER       = 0
+   NO_DOWNLOAD     = 0
+   NO_UPDATE       = 0
+   NO_CLOBBER      = 0
+   ARCHIVE_EXT     = ''
+   ARCHIVE_DIR     = ''
+   IGNORE_FILESIZE = 0
+   IGNORE_FILEDATE = 0
+   DOWNLOADONLY    = 0
+   USE_WGET        = 0
+   NOWAIT          = 0
+   VERBOSE         = 2
+   FORCE_DOWNLOAD  = 0
+ERG_INIT(141): 
+ERG(Arase) in orbit for 2058 Days, 21 Hours, 02 Minutes, 19 Seconds since launch
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf"
+STORE_DATA(271): Creating tplot variable: 1 erg_mgf_l2_mag_8sec_dsi
+STORE_DATA(271): Creating tplot variable: 2 erg_mgf_l2_mag_8sec_gse
+STORE_DATA(271): Creating tplot variable: 3 erg_mgf_l2_mag_8sec_gsm
+STORE_DATA(271): Creating tplot variable: 4 erg_mgf_l2_mag_8sec_sm
+STORE_DATA(271): Creating tplot variable: 5 erg_mgf_l2_magt_8sec
+STORE_DATA(271): Creating tplot variable: 6 erg_mgf_l2_rmsd_8sec_dsi
+STORE_DATA(271): Creating tplot variable: 7 erg_mgf_l2_rmsd_8sec_gse
+STORE_DATA(271): Creating tplot variable: 8 erg_mgf_l2_rmsd_8sec_gsm
+STORE_DATA(271): Creating tplot variable: 9 erg_mgf_l2_rmsd_8sec_sm
+STORE_DATA(271): Creating tplot variable: 10 erg_mgf_l2_rmsd_8sec
+STORE_DATA(271): Creating tplot variable: 11 erg_mgf_l2_n_rmsd_8sec
+STORE_DATA(271): Creating tplot variable: 12 erg_mgf_l2_dyn_rng_8sec
+STORE_DATA(271): Creating tplot variable: 13 erg_mgf_l2_quality_8sec
+STORE_DATA(271): Creating tplot variable: 14 erg_mgf_l2_quality_8sec_gc
+STORE_DATA(271): Creating tplot variable: 15 erg_mgf_l2_igrf_8sec_dsi
+STORE_DATA(271): Creating tplot variable: 16 erg_mgf_l2_igrf_8sec_gse
+STORE_DATA(271): Creating tplot variable: 17 erg_mgf_l2_igrf_8sec_gsm
+STORE_DATA(271): Creating tplot variable: 18 erg_mgf_l2_igrf_8sec_sm
+TCLIP(63): No Clipping of: 
+STORE_DATA(271): Altering tplot variable: 1 erg_mgf_l2_mag_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 2 erg_mgf_l2_mag_8sec_gse
+STORE_DATA(271): Altering tplot variable: 3 erg_mgf_l2_mag_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 4 erg_mgf_l2_mag_8sec_sm
+STORE_DATA(271): Altering tplot variable: 5 erg_mgf_l2_magt_8sec
+STORE_DATA(271): Altering tplot variable: 12 erg_mgf_l2_dyn_rng_8sec
+STORE_DATA(271): Altering tplot variable: 13 erg_mgf_l2_quality_8sec
+STORE_DATA(271): Altering tplot variable: 6 erg_mgf_l2_rmsd_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 7 erg_mgf_l2_rmsd_8sec_gse
+STORE_DATA(271): Altering tplot variable: 8 erg_mgf_l2_rmsd_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 9 erg_mgf_l2_rmsd_8sec_sm
+STORE_DATA(271): Altering tplot variable: 10 erg_mgf_l2_rmsd_8sec
+ 
+**************************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Magnetic Field
+Experiment (MGF) Level 2 spin-averaged magnetic field data
+
+Information about ERG MGF
+
+PI: Ayako Matsuoka
+Affiliation: Data Analysis Center for Geomagnetism and Space Magnetism,
+Graduate School of Science, Kyoto University, Kitashirakawa-Oiwake Cho,
+Sakyo-ku Kyoto 606-8502, Japan
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of MGF L2: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Mgf
+Contact: erg_mgf_info at isee.nagoya-u.ac.jp
+**************************************************************************
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/64hz/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/64hz/2017/04/erg_mgf_l2_64hz_sgi_2017040101_v03.04.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/mgf/l2/64hz/2017/04/erg_mgf_l2_64hz_sgi_2017040101_v03.04.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/mgf/l2/64hz/2017/04/erg_mgf_l2_64hz_sgi_2017040101_v03.04.cdf"
+STORE_DATA(271): Creating tplot variable: 19 erg_mgf_l2_date_time_64hz
+STORE_DATA(271): Creating tplot variable: 20 erg_mgf_l2_mag_64hz_sgi
+STORE_DATA(271): Creating tplot variable: 21 erg_mgf_l2_dyn_rng_64hz
+STORE_DATA(271): Creating tplot variable: 22 erg_mgf_l2_quality_64hz
+STORE_DATA(271): Creating tplot variable: 23 erg_mgf_l2_quality_64hz_gc
+STORE_DATA(271): Creating tplot variable: 24 erg_mgf_l2_spin_phase_64hz
+STORE_DATA(271): Creating tplot variable: 25 erg_mgf_l2_ti_64hz
+STORE_DATA(271): Altering tplot variable: 19 erg_mgf_l2_date_time_64hz
+STORE_DATA(271): Altering tplot variable: 20 erg_mgf_l2_mag_64hz_sgi
+TCLIP(63): No Clipping of: 
+STORE_DATA(271): Altering tplot variable: 21 erg_mgf_l2_dyn_rng_64hz
+STORE_DATA(271): Altering tplot variable: 22 erg_mgf_l2_quality_64hz
+ 
+**************************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Magnetic Field
+Experiment (MGF) Level 2 64 Hz resolution magnetic field data
+
+Information about ERG MGF
+
+PI: Ayako Matsuoka
+Affiliation: Data Analysis Center for Geomagnetism and Space Magnetism,
+Graduate School of Science, Kyoto University, Kitashirakawa-Oiwake Cho,
+Sakyo-ku Kyoto 606-8502, Japan
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of MGF L2: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Mgf
+Contact: erg_mgf_info at isee.nagoya-u.ac.jp
+**************************************************************************
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/hfa/l2/spec/low/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/hfa/l2/spec/low/2017/04/erg_pwe_hfa_l2_spec_low_20170401_v01_02.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/pwe/hfa/l2/spec/low/2017/04/erg_pwe_hfa_l2_spec_low_20170401_v01_02.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/pwe/hfa/l2/spec/low/2017/04/erg_pwe_hfa_l2_spec_low_20170401_v01_02.cdf"
+STORE_DATA(271): Creating tplot variable: 26 erg_pwe_hfa_l2_low_spectra_eu
+STORE_DATA(271): Creating tplot variable: 27 erg_pwe_hfa_l2_low_spectra_ev
+STORE_DATA(271): Creating tplot variable: 28 erg_pwe_hfa_l2_low_spectra_bgamma
+STORE_DATA(271): Creating tplot variable: 29 erg_pwe_hfa_l2_low_spectra_esum
+STORE_DATA(271): Creating tplot variable: 30 erg_pwe_hfa_l2_low_spectra_er
+STORE_DATA(271): Creating tplot variable: 31 erg_pwe_hfa_l2_low_spectra_el
+STORE_DATA(271): Creating tplot variable: 32 erg_pwe_hfa_l2_low_spectra_e_mix
+STORE_DATA(271): Creating tplot variable: 33 erg_pwe_hfa_l2_low_spectra_e_ar
+STORE_DATA(271): Creating tplot variable: 34 erg_pwe_hfa_l2_low_spectra_eu_ev
+STORE_DATA(271): Creating tplot variable: 35 erg_pwe_hfa_l2_low_spectra_eu_bg
+STORE_DATA(271): Creating tplot variable: 36 erg_pwe_hfa_l2_low_spectra_ev_bg
+STORE_DATA(271): Creating tplot variable: 37 erg_pwe_hfa_l2_low_quality_flag
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/hfa/l2/spec/high/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/hfa/l2/spec/high/2017/04/erg_pwe_hfa_l2_spec_high_20170401_v01_02.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/pwe/hfa/l2/spec/high/2017/04/erg_pwe_hfa_l2_spec_high_20170401_v01_02.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/pwe/hfa/l2/spec/high/2017/04/erg_pwe_hfa_l2_spec_high_20170401_v01_02.cdf"
+STORE_DATA(271): Creating tplot variable: 38 erg_pwe_hfa_l2_high_spectra_eu
+STORE_DATA(271): Creating tplot variable: 39 erg_pwe_hfa_l2_high_spectra_ev
+STORE_DATA(271): Creating tplot variable: 40 erg_pwe_hfa_l2_high_spectra_bgamma
+STORE_DATA(271): Creating tplot variable: 41 erg_pwe_hfa_l2_high_spectra_esum
+STORE_DATA(271): Creating tplot variable: 42 erg_pwe_hfa_l2_high_spectra_er
+STORE_DATA(271): Creating tplot variable: 43 erg_pwe_hfa_l2_high_spectra_el
+STORE_DATA(271): Creating tplot variable: 44 erg_pwe_hfa_l2_high_spectra_e_mix
+STORE_DATA(271): Creating tplot variable: 45 erg_pwe_hfa_l2_high_spectra_e_ar
+STORE_DATA(271): Creating tplot variable: 46 erg_pwe_hfa_l2_high_spectra_eu_ev
+STORE_DATA(271): Creating tplot variable: 47 erg_pwe_hfa_l2_high_spectra_eu_bg
+STORE_DATA(271): Creating tplot variable: 48 erg_pwe_hfa_l2_high_spectra_ev_bg
+STORE_DATA(271): Creating tplot variable: 49 erg_pwe_hfa_l2_high_quality_flag
+STORE_DATA(271): Creating tplot variable: 50 erg_pwe_hfa_l2_lh_spectra_eu
+STORE_DATA(347): Multi- tplot variable: 50 erg_pwe_hfa_l2_lh_spectra_eu : 
+                 erg_pwe_hfa_l2_low_spectra_eu erg_pwe_hfa_l2_high_spectra_eu
+STORE_DATA(271): Creating tplot variable: 51 erg_pwe_hfa_l2_lh_spectra_ev
+STORE_DATA(347): Multi- tplot variable: 51 erg_pwe_hfa_l2_lh_spectra_ev : 
+                 erg_pwe_hfa_l2_low_spectra_ev erg_pwe_hfa_l2_high_spectra_ev
+STORE_DATA(271): Creating tplot variable: 52 erg_pwe_hfa_l2_lh_spectra_bgamma
+STORE_DATA(347): Multi- tplot variable: 52 erg_pwe_hfa_l2_lh_spectra_bgamma : 
+                 erg_pwe_hfa_l2_low_spectra_bgamma erg_pwe_hfa_l2_high_spectra_bgamma
+STORE_DATA(271): Creating tplot variable: 53 erg_pwe_hfa_l2_lh_spectra_esum
+STORE_DATA(347): Multi- tplot variable: 53 erg_pwe_hfa_l2_lh_spectra_esum : 
+                 erg_pwe_hfa_l2_low_spectra_esum erg_pwe_hfa_l2_high_spectra_esum
+STORE_DATA(271): Creating tplot variable: 54 erg_pwe_hfa_l2_lh_spectra_er
+STORE_DATA(347): Multi- tplot variable: 54 erg_pwe_hfa_l2_lh_spectra_er : 
+                 erg_pwe_hfa_l2_low_spectra_er erg_pwe_hfa_l2_high_spectra_er
+STORE_DATA(271): Creating tplot variable: 55 erg_pwe_hfa_l2_lh_spectra_el
+STORE_DATA(347): Multi- tplot variable: 55 erg_pwe_hfa_l2_lh_spectra_el : 
+                 erg_pwe_hfa_l2_low_spectra_el erg_pwe_hfa_l2_high_spectra_el
+STORE_DATA(271): Creating tplot variable: 56 erg_pwe_hfa_l2_lh_spectra_e_mix
+STORE_DATA(347): Multi- tplot variable: 56 erg_pwe_hfa_l2_lh_spectra_e_mix : 
+                 erg_pwe_hfa_l2_low_spectra_e_mix erg_pwe_hfa_l2_high_spectra_e_mix
+STORE_DATA(271): Creating tplot variable: 57 erg_pwe_hfa_l2_lh_spectra_e_ar
+STORE_DATA(347): Multi- tplot variable: 57 erg_pwe_hfa_l2_lh_spectra_e_ar : 
+                 erg_pwe_hfa_l2_low_spectra_e_ar erg_pwe_hfa_l2_high_spectra_e_ar
+STORE_DATA(271): Creating tplot variable: 58 erg_pwe_hfa_l2_lh_spectra_eu_ev
+STORE_DATA(347): Multi- tplot variable: 58 erg_pwe_hfa_l2_lh_spectra_eu_ev : 
+                 erg_pwe_hfa_l2_low_spectra_eu_ev erg_pwe_hfa_l2_high_spectra_eu_ev
+STORE_DATA(271): Creating tplot variable: 59 erg_pwe_hfa_l2_lh_spectra_eu_bg
+STORE_DATA(347): Multi- tplot variable: 59 erg_pwe_hfa_l2_lh_spectra_eu_bg : 
+                 erg_pwe_hfa_l2_low_spectra_eu_bg erg_pwe_hfa_l2_high_spectra_eu_bg
+STORE_DATA(271): Creating tplot variable: 60 erg_pwe_hfa_l2_lh_spectra_ev_bg
+STORE_DATA(347): Multi- tplot variable: 60 erg_pwe_hfa_l2_lh_spectra_ev_bg : 
+                 erg_pwe_hfa_l2_low_spectra_ev_bg erg_pwe_hfa_l2_high_spectra_ev_bg
+ 
+**************************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Plasma Wave
+Experiment (PWE) Electric Field Data (HFA) Level 2 spectrum data
+
+Information about ERG PWE HFA
+
+PI: Yoshiya Kasahara
+Affiliation: Kanazawa University
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of PWE/HFA: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Pwe/Hfa
+To show the RoR, set "ror" keyword
+Contact: erg_pwe_info at isee.nagoya-u.ac.jp
+**************************************************************************
+STORE_DATA(271): Creating tplot variable: 61 erg_load_datalist
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/erg_pwe_ofa_l2_matrix_sgi_20170401_v01_03.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/erg_pwe_ofa_l2_matrix_sgi_20170401_v01_03.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/erg_pwe_ofa_l2_matrix_sgi_20170401_v01_03.cdf"
+STORE_DATA(271): Creating tplot variable: 62 erg_pwe_ofa_l2_matrix_Ex_Ex_132
+STORE_DATA(271): Creating tplot variable: 63 erg_pwe_ofa_l2_matrix_Ey_Ey_132
+STORE_DATA(271): Creating tplot variable: 64 erg_pwe_ofa_l2_matrix_Ex_Ey_132
+STORE_DATA(271): Creating tplot variable: 65 erg_pwe_ofa_l2_matrix_Ey_Ex_132
+STORE_DATA(271): Creating tplot variable: 66 erg_pwe_ofa_l2_matrix_Etotal_132
+STORE_DATA(271): Creating tplot variable: 67 erg_pwe_ofa_l2_matrix_quality_flag_e132
+STORE_DATA(271): Creating tplot variable: 68 erg_pwe_ofa_l2_matrix_Bx_Bx_132
+STORE_DATA(271): Creating tplot variable: 69 erg_pwe_ofa_l2_matrix_By_By_132
+STORE_DATA(271): Creating tplot variable: 70 erg_pwe_ofa_l2_matrix_Bz_Bz_132
+STORE_DATA(271): Creating tplot variable: 71 erg_pwe_ofa_l2_matrix_Bx_By_132
+STORE_DATA(271): Creating tplot variable: 72 erg_pwe_ofa_l2_matrix_Bx_Bz_132
+STORE_DATA(271): Creating tplot variable: 73 erg_pwe_ofa_l2_matrix_By_Bx_132
+STORE_DATA(271): Creating tplot variable: 74 erg_pwe_ofa_l2_matrix_By_Bz_132
+STORE_DATA(271): Creating tplot variable: 75 erg_pwe_ofa_l2_matrix_Bz_Bx_132
+STORE_DATA(271): Creating tplot variable: 76 erg_pwe_ofa_l2_matrix_Bz_By_132
+STORE_DATA(271): Creating tplot variable: 77 erg_pwe_ofa_l2_matrix_Btotal_132
+STORE_DATA(271): Creating tplot variable: 78 erg_pwe_ofa_l2_matrix_quality_flag_b132
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/erg_pwe_ofa_l2_matrix_sgi_20170401_v01_03.cdf"
+STORE_DATA(271): Altering tplot variable: 61 erg_load_datalist
+ 
+**********************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Plasma Wave
+Experiment (PWE) Onboard Frequency Analyzer (OFA) Level 2 spectrum data
+
+Information about ERG PWE OFA
+
+PI: Yoshiya Kasahara
+Affiliation: Kanazawa University
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of PWE/OFA: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Pwe/Ofa
+To show the RoR, set "ror" keyword
+Contact: erg_pwe_info at isee.nagoya-u.ac.jp
+**********************************************************************
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf"
+STORE_DATA(271): Altering tplot variable: 1 erg_mgf_l2_mag_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 2 erg_mgf_l2_mag_8sec_gse
+STORE_DATA(271): Altering tplot variable: 3 erg_mgf_l2_mag_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 4 erg_mgf_l2_mag_8sec_sm
+STORE_DATA(271): Altering tplot variable: 5 erg_mgf_l2_magt_8sec
+STORE_DATA(271): Altering tplot variable: 6 erg_mgf_l2_rmsd_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 7 erg_mgf_l2_rmsd_8sec_gse
+STORE_DATA(271): Altering tplot variable: 8 erg_mgf_l2_rmsd_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 9 erg_mgf_l2_rmsd_8sec_sm
+STORE_DATA(271): Altering tplot variable: 10 erg_mgf_l2_rmsd_8sec
+STORE_DATA(271): Altering tplot variable: 11 erg_mgf_l2_n_rmsd_8sec
+STORE_DATA(271): Altering tplot variable: 12 erg_mgf_l2_dyn_rng_8sec
+STORE_DATA(271): Altering tplot variable: 13 erg_mgf_l2_quality_8sec
+STORE_DATA(271): Altering tplot variable: 14 erg_mgf_l2_quality_8sec_gc
+STORE_DATA(271): Altering tplot variable: 15 erg_mgf_l2_igrf_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 16 erg_mgf_l2_igrf_8sec_gse
+STORE_DATA(271): Altering tplot variable: 17 erg_mgf_l2_igrf_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 18 erg_mgf_l2_igrf_8sec_sm
+TCLIP(63): No Clipping of: 
+STORE_DATA(271): Altering tplot variable: 1 erg_mgf_l2_mag_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 2 erg_mgf_l2_mag_8sec_gse
+STORE_DATA(271): Altering tplot variable: 3 erg_mgf_l2_mag_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 4 erg_mgf_l2_mag_8sec_sm
+STORE_DATA(271): Altering tplot variable: 5 erg_mgf_l2_magt_8sec
+STORE_DATA(271): Altering tplot variable: 12 erg_mgf_l2_dyn_rng_8sec
+STORE_DATA(271): Altering tplot variable: 13 erg_mgf_l2_quality_8sec
+STORE_DATA(271): Altering tplot variable: 6 erg_mgf_l2_rmsd_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 7 erg_mgf_l2_rmsd_8sec_gse
+STORE_DATA(271): Altering tplot variable: 8 erg_mgf_l2_rmsd_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 9 erg_mgf_l2_rmsd_8sec_sm
+STORE_DATA(271): Altering tplot variable: 10 erg_mgf_l2_rmsd_8sec
+ 
+**************************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Magnetic Field
+Experiment (MGF) Level 2 spin-averaged magnetic field data
+
+Information about ERG MGF
+
+PI: Ayako Matsuoka
+Affiliation: Data Analysis Center for Geomagnetism and Space Magnetism,
+Graduate School of Science, Kyoto University, Kitashirakawa-Oiwake Cho,
+Sakyo-ku Kyoto 606-8502, Japan
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of MGF L2: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Mgf
+Contact: erg_mgf_info at isee.nagoya-u.ac.jp
+**************************************************************************
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/64hz/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/64hz/2017/04/erg_mgf_l2_64hz_sgi_2017040101_v03.04.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/mgf/l2/64hz/2017/04/erg_mgf_l2_64hz_sgi_2017040101_v03.04.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/mgf/l2/64hz/2017/04/erg_mgf_l2_64hz_sgi_2017040101_v03.04.cdf"
+STORE_DATA(271): Altering tplot variable: 19 erg_mgf_l2_date_time_64hz
+STORE_DATA(271): Altering tplot variable: 20 erg_mgf_l2_mag_64hz_sgi
+STORE_DATA(271): Altering tplot variable: 21 erg_mgf_l2_dyn_rng_64hz
+STORE_DATA(271): Altering tplot variable: 22 erg_mgf_l2_quality_64hz
+STORE_DATA(271): Altering tplot variable: 23 erg_mgf_l2_quality_64hz_gc
+STORE_DATA(271): Altering tplot variable: 24 erg_mgf_l2_spin_phase_64hz
+STORE_DATA(271): Altering tplot variable: 25 erg_mgf_l2_ti_64hz
+STORE_DATA(271): Altering tplot variable: 19 erg_mgf_l2_date_time_64hz
+STORE_DATA(271): Altering tplot variable: 20 erg_mgf_l2_mag_64hz_sgi
+TCLIP(63): No Clipping of: 
+STORE_DATA(271): Altering tplot variable: 21 erg_mgf_l2_dyn_rng_64hz
+STORE_DATA(271): Altering tplot variable: 22 erg_mgf_l2_quality_64hz
+ 
+**************************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Magnetic Field
+Experiment (MGF) Level 2 64 Hz resolution magnetic field data
+
+Information about ERG MGF
+
+PI: Ayako Matsuoka
+Affiliation: Data Analysis Center for Geomagnetism and Space Magnetism,
+Graduate School of Science, Kyoto University, Kitashirakawa-Oiwake Cho,
+Sakyo-ku Kyoto 606-8502, Japan
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of MGF L2: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Mgf
+Contact: erg_mgf_info at isee.nagoya-u.ac.jp
+**************************************************************************
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/mgf/l2/8sec/2017/04/erg_mgf_l2_8sec_20170401_v03.04.cdf"
+STORE_DATA(271): Altering tplot variable: 1 erg_mgf_l2_mag_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 2 erg_mgf_l2_mag_8sec_gse
+STORE_DATA(271): Altering tplot variable: 3 erg_mgf_l2_mag_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 4 erg_mgf_l2_mag_8sec_sm
+STORE_DATA(271): Altering tplot variable: 5 erg_mgf_l2_magt_8sec
+STORE_DATA(271): Altering tplot variable: 6 erg_mgf_l2_rmsd_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 7 erg_mgf_l2_rmsd_8sec_gse
+STORE_DATA(271): Altering tplot variable: 8 erg_mgf_l2_rmsd_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 9 erg_mgf_l2_rmsd_8sec_sm
+STORE_DATA(271): Altering tplot variable: 10 erg_mgf_l2_rmsd_8sec
+STORE_DATA(271): Altering tplot variable: 11 erg_mgf_l2_n_rmsd_8sec
+STORE_DATA(271): Altering tplot variable: 12 erg_mgf_l2_dyn_rng_8sec
+STORE_DATA(271): Altering tplot variable: 13 erg_mgf_l2_quality_8sec
+STORE_DATA(271): Altering tplot variable: 14 erg_mgf_l2_quality_8sec_gc
+STORE_DATA(271): Altering tplot variable: 15 erg_mgf_l2_igrf_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 16 erg_mgf_l2_igrf_8sec_gse
+STORE_DATA(271): Altering tplot variable: 17 erg_mgf_l2_igrf_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 18 erg_mgf_l2_igrf_8sec_sm
+TCLIP(63): No Clipping of: 
+STORE_DATA(271): Altering tplot variable: 1 erg_mgf_l2_mag_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 2 erg_mgf_l2_mag_8sec_gse
+STORE_DATA(271): Altering tplot variable: 3 erg_mgf_l2_mag_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 4 erg_mgf_l2_mag_8sec_sm
+STORE_DATA(271): Altering tplot variable: 5 erg_mgf_l2_magt_8sec
+STORE_DATA(271): Altering tplot variable: 12 erg_mgf_l2_dyn_rng_8sec
+STORE_DATA(271): Altering tplot variable: 13 erg_mgf_l2_quality_8sec
+STORE_DATA(271): Altering tplot variable: 6 erg_mgf_l2_rmsd_8sec_dsi
+STORE_DATA(271): Altering tplot variable: 7 erg_mgf_l2_rmsd_8sec_gse
+STORE_DATA(271): Altering tplot variable: 8 erg_mgf_l2_rmsd_8sec_gsm
+STORE_DATA(271): Altering tplot variable: 9 erg_mgf_l2_rmsd_8sec_sm
+STORE_DATA(271): Altering tplot variable: 10 erg_mgf_l2_rmsd_8sec
+ 
+**************************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Magnetic Field
+Experiment (MGF) Level 2 spin-averaged magnetic field data
+
+Information about ERG MGF
+
+PI: Ayako Matsuoka
+Affiliation: Data Analysis Center for Geomagnetism and Space Magnetism,
+Graduate School of Science, Kyoto University, Kitashirakawa-Oiwake Cho,
+Sakyo-ku Kyoto 606-8502, Japan
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of MGF L2: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Mgf
+Contact: erg_mgf_info at isee.nagoya-u.ac.jp
+**************************************************************************
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/erg_pwe_ofa_l2_matrix_sgi_20170401_v01_03.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/erg_pwe_ofa_l2_matrix_sgi_20170401_v01_03.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/erg_pwe_ofa_l2_matrix_sgi_20170401_v01_03.cdf"
+STORE_DATA(271): Altering tplot variable: 62 erg_pwe_ofa_l2_matrix_Ex_Ex_132
+STORE_DATA(271): Altering tplot variable: 63 erg_pwe_ofa_l2_matrix_Ey_Ey_132
+STORE_DATA(271): Altering tplot variable: 64 erg_pwe_ofa_l2_matrix_Ex_Ey_132
+STORE_DATA(271): Altering tplot variable: 65 erg_pwe_ofa_l2_matrix_Ey_Ex_132
+STORE_DATA(271): Altering tplot variable: 66 erg_pwe_ofa_l2_matrix_Etotal_132
+STORE_DATA(271): Altering tplot variable: 67 erg_pwe_ofa_l2_matrix_quality_flag_e132
+STORE_DATA(271): Altering tplot variable: 68 erg_pwe_ofa_l2_matrix_Bx_Bx_132
+STORE_DATA(271): Altering tplot variable: 69 erg_pwe_ofa_l2_matrix_By_By_132
+STORE_DATA(271): Altering tplot variable: 70 erg_pwe_ofa_l2_matrix_Bz_Bz_132
+STORE_DATA(271): Altering tplot variable: 71 erg_pwe_ofa_l2_matrix_Bx_By_132
+STORE_DATA(271): Altering tplot variable: 72 erg_pwe_ofa_l2_matrix_Bx_Bz_132
+STORE_DATA(271): Altering tplot variable: 73 erg_pwe_ofa_l2_matrix_By_Bx_132
+STORE_DATA(271): Altering tplot variable: 74 erg_pwe_ofa_l2_matrix_By_Bz_132
+STORE_DATA(271): Altering tplot variable: 75 erg_pwe_ofa_l2_matrix_Bz_Bx_132
+STORE_DATA(271): Altering tplot variable: 76 erg_pwe_ofa_l2_matrix_Bz_By_132
+STORE_DATA(271): Altering tplot variable: 77 erg_pwe_ofa_l2_matrix_Btotal_132
+STORE_DATA(271): Altering tplot variable: 78 erg_pwe_ofa_l2_matrix_quality_flag_b132
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/matrix/2017/04/erg_pwe_ofa_l2_matrix_sgi_20170401_v01_03.cdf"
+STORE_DATA(271): Altering tplot variable: 61 erg_load_datalist
+ 
+**********************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Plasma Wave
+Experiment (PWE) Onboard Frequency Analyzer (OFA) Level 2 spectrum data
+
+Information about ERG PWE OFA
+
+PI: Yoshiya Kasahara
+Affiliation: Kanazawa University
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of PWE/OFA: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Pwe/Ofa
+To show the RoR, set "ror" keyword
+Contact: erg_pwe_info at isee.nagoya-u.ac.jp
+**********************************************************************
+STORE_DATA(271): Creating tplot variable: 79 erg_mgf_l2_mag_64hz_sgi_x
+STORE_DATA(271): Creating tplot variable: 80 erg_mgf_l2_mag_64hz_sgi_y
+STORE_DATA(271): Creating tplot variable: 81 erg_mgf_l2_mag_64hz_sgi_z
+STORE_DATA(271): Creating tplot variable: 82 erg_mgf_l2_mag_64hz_sgi_x_interp
+STORE_DATA(271): Creating tplot variable: 83 erg_mgf_l2_mag_64hz_sgi_y_interp
+STORE_DATA(271): Creating tplot variable: 84 erg_mgf_l2_mag_64hz_sgi_z_interp
+STORE_DATA(271): Creating tplot variable: 85 erg_mgf_l2_mag_64hz_sgi_rot_x
+STORE_DATA(271): Creating tplot variable: 86 erg_mgf_l2_mag_64hz_sgi_rot_y
+STORE_DATA(271): Creating tplot variable: 87 erg_mgf_l2_mag_64hz_sgi_rot_z
+STORE_DATA(271): Creating tplot variable: 88 erg_pwe_ofa_l2_matrix_Bx_Bx_re
+STORE_DATA(271): Creating tplot variable: 89 erg_pwe_ofa_l2_matrix_Bx_Bx_im
+STORE_DATA(271): Creating tplot variable: 90 erg_pwe_ofa_l2_matrix_By_By_re
+STORE_DATA(271): Creating tplot variable: 91 erg_pwe_ofa_l2_matrix_By_By_im
+STORE_DATA(271): Creating tplot variable: 92 erg_pwe_ofa_l2_matrix_Bz_Bz_re
+STORE_DATA(271): Creating tplot variable: 93 erg_pwe_ofa_l2_matrix_Bz_Bz_im
+STORE_DATA(271): Creating tplot variable: 94 powspec_b_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 95 kvec_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 96 polarization_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 97 planarity_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 98 lambda1_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 99 lambda2_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 100 lambda3_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 101 lambda2-1_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 102 lambda3-2_LASVD_ma3
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/ofa/l2/complex/2017/04/
+SPD_DOWNLOAD_FILE(297): Download complete
+SPD_DOWNLOAD_FILE(221): Downloading: https://ergsc.isee.nagoya-u.ac.jp/data/ergsc/satellite/erg/pwe/ofa/l2/complex/2017/04/erg_pwe_ofa_l2_complex_sgi_20170401_v01_03.cdf
+SPD_DOWNLOAD_FILE(308): File is current:  /Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/complex/2017/04/erg_pwe_ofa_l2_complex_sgi_20170401_v01_03.cdf
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/complex/2017/04/erg_pwe_ofa_l2_complex_sgi_20170401_v01_03.cdf"
+STORE_DATA(271): Creating tplot variable: 103 erg_pwe_ofa_l2_complex_Ex_132
+STORE_DATA(271): Creating tplot variable: 104 erg_pwe_ofa_l2_complex_Ey_132
+STORE_DATA(271): Creating tplot variable: 105 erg_pwe_ofa_l2_complex_Etotal_132
+STORE_DATA(271): Creating tplot variable: 106 erg_pwe_ofa_l2_complex_quality_flag_e132
+STORE_DATA(271): Creating tplot variable: 107 erg_pwe_ofa_l2_complex_Bx_132
+STORE_DATA(271): Creating tplot variable: 108 erg_pwe_ofa_l2_complex_By_132
+STORE_DATA(271): Creating tplot variable: 109 erg_pwe_ofa_l2_complex_Bz_132
+STORE_DATA(271): Creating tplot variable: 110 erg_pwe_ofa_l2_complex_Btotal_132
+STORE_DATA(271): Creating tplot variable: 111 erg_pwe_ofa_l2_complex_quality_flag_b132
+CDF_LOAD_VARS(226): Loading file: "/Users/ampuku/data/ergsc/satellite/erg/pwe/ofa/l2/complex/2017/04/erg_pwe_ofa_l2_complex_sgi_20170401_v01_03.cdf"
+STORE_DATA(271): Altering tplot variable: 61 erg_load_datalist
+ 
+**********************************************************************
+Exploration of Energization and Radiation in Geospace (ERG) Plasma Wave
+Experiment (PWE) Onboard Frequency Analyzer (OFA) Level 2 spectrum data
+
+Information about ERG PWE OFA
+
+PI: Yoshiya Kasahara
+Affiliation: Kanazawa University
+
+RoR of ERG project common: https://ergsc.isee.nagoya-u.ac.jp/data_info/rules_of_the_road.shtml.en
+RoR of PWE/OFA: https://ergsc.isee.nagoya-u.ac.jp/mw/index.php/ErgSat/Pwe/Ofa
+To show the RoR, set "ror" keyword
+Contact: erg_pwe_info at isee.nagoya-u.ac.jp
+**********************************************************************
+STORE_DATA(271): Altering tplot variable: 79 erg_mgf_l2_mag_64hz_sgi_x
+STORE_DATA(271): Altering tplot variable: 80 erg_mgf_l2_mag_64hz_sgi_y
+STORE_DATA(271): Altering tplot variable: 81 erg_mgf_l2_mag_64hz_sgi_z
+STORE_DATA(271): Altering tplot variable: 82 erg_mgf_l2_mag_64hz_sgi_x_interp
+STORE_DATA(271): Altering tplot variable: 83 erg_mgf_l2_mag_64hz_sgi_y_interp
+STORE_DATA(271): Altering tplot variable: 84 erg_mgf_l2_mag_64hz_sgi_z_interp
+STORE_DATA(271): Creating tplot variable: 112 S
+TPLOT(356):  105 erg_pwe_ofa_l2_complex_Etotal_132
+TPLOT(356):  110 erg_pwe_ofa_l2_complex_Btotal_132
+TPLOT(356):  112 S
+STORE_DATA(271): Creating tplot variable: 113 kvec_LASVD_ma3_mask
+STORE_DATA(271): Creating tplot variable: 114 polarization_LASVD_ma3_mask
+STORE_DATA(271): Creating tplot variable: 115 planarity_LASVD_ma3_mask
+STORE_DATA(271): Creating tplot variable: 116 erg_pwe_ofa_l2_matrix_Btotal_132_interp
+STORE_DATA(271): Creating tplot variable: 117 S_mask
+STORE_DATA(271): Creating tplot variable: 118 fce
+STORE_DATA(271): Creating tplot variable: 119 fce_half
+STORE_DATA(271): Creating tplot variable: 120 flhr
+SPD_DOWNLOAD_FILE(221): Downloading: http://adrastea.gp.tohoku.ac.jp/~erg/data/hfa_l3_h/2017/erg_hfa_l3_high_20170401.txt
+SPD_DOWNLOAD_FILE(290): Download complete:  /Users/ampuku/data/ERGHFAL3text2017/erg_hfa_l3_high_20170401.txt
+STORE_DATA(271): Creating tplot variable: 121 hfa_l3_r
+STORE_DATA(271): Creating tplot variable: 122 hfa_l3_glat
+STORE_DATA(271): Creating tplot variable: 123 hfa_l3_mlt
+STORE_DATA(271): Creating tplot variable: 124 hfa_l3_L
+STORE_DATA(271): Creating tplot variable: 125 hfa_l3_b
+STORE_DATA(271): Creating tplot variable: 126 hfa_l3_fce
+STORE_DATA(271): Creating tplot variable: 127 hfa_l3_fuh
+STORE_DATA(271): Creating tplot variable: 128 hfa_l3_fpe
+STORE_DATA(271): Creating tplot variable: 129 hfa_l3_ne
+STORE_DATA(271): Creating tplot variable: 130 hfa_l3_fzc
+STORE_DATA(271): Creating tplot variable: 131 hfa_l3_flh
+STORE_DATA(271): Creating tplot variable: 132 fUHR
+STORE_DATA(271): Creating tplot variable: 133 fUHR_interp
+STORE_DATA(271): Creating tplot variable: 134 fUHR_interp_nan
+STORE_DATA(271): Creating tplot variable: 135 fpe
+STORE_DATA(271): Creating tplot variable: 136 Ne
+STORE_DATA(271): Creating tplot variable: 137 fce_interp
+STORE_DATA(271): Creating tplot variable: 138 fpe_interp
+STORE_DATA(271): Creating tplot variable: 139 kpara_LASVD_ma3
+STORE_DATA(271): Creating tplot variable: 140 kpara_LASVD_ma3_mask
+TPLOT(356):  140 kpara_LASVD_ma3_mask
+TPLOT_SAVE(63): Saved tplot file: /Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/20170401014500kpara_LASVD_ma3_mask.tplot
