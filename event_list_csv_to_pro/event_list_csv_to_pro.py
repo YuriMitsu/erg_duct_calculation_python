@@ -14,13 +14,13 @@ def EventListCsvToPro(file_names):
         texts = '\n; コンパイル\n; .compile -v \'/Users/ampuku/Documents/duct/code/IDL/for_event_analysis__lists/' + \
             str(classification_name) + '/memo_' + \
             str(list_name) + '_event_list.pro\''
-        texts += '\n; .compile -v \'/Users/ampuku/Documents/duct/code/IDL/for_event_analysis/plot_event_normal.pro\''
+        texts += '\n; .compile -v \'/Users/ampuku/Documents/duct/code/IDL/for_event_analysis/plot_event_normal_5min.pro\''
         texts += '\n\npro memo_' + str(list_name) + '_event_list\n'
 
         for i in range(len(data)):
             if i == 0 or (data.start_time[i] != data.start_time[i-1] and not isinstance(data.start_time[i], float)):
                 text = '\n    timespan, \'' + str(data.start_time[i]) + '\', ' + str(data.range_min[i]) + \
-                    ', /minute \n    ;plot_event_normal, UHR_file_name=\'' + \
+                    ', /minute \n    ;plot_event_normal_5min, UHR_file_name=\'' + \
                     str(data.UHR_file_name[i]) + '\'\n'
                 texts += text
             if isinstance(data.duct_time[i], str):
@@ -60,7 +60,8 @@ memo~.proを回せばイベントの時間帯の様子が細かく(多分)見れ
 """
 file_names = np.array(
     # ['suspicion/sus_201704', 'depression/dep_201704', 'enhancement/enh_201704'])
-    ['depression/dep_201704', 'enhancement/enh_201704'])
+    ['depression/dep_wfcandstrongmf'])
+# ['depression/dep_201704', 'enhancement/enh_201704'])
 EventListCsvToPro(file_names)
 
 # %%

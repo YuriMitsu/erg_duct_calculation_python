@@ -104,7 +104,7 @@ def EventListCsvToProForCalcLam(file_name):
 
 
 # %%
-file_path = 'depression/dep_201704.csv'
+file_path = 'depression/dep_wfcandstrongmf.csv'
 
 # %%
 data = pd.read_csv(
@@ -119,7 +119,7 @@ EventListCsvToProForCalcLam(file_path)
 # 作成した memo_to_save_kpara_tplots.pro を python から実行.
 # 20170411080000kpara_LASVD_ma3_mask.tplot などのデータを作成する.
 
-subprocess.run(["bash", "test.sh"])
+# subprocess.run(["bash", "test.sh"])
 # bash test.sh > test.log &
 
 # p1 = subprocess.Popen(
