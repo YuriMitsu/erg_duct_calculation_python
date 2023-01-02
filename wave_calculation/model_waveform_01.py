@@ -21,7 +21,6 @@ import pytplot
 # ipol = +1  # +1 : R-mode  -1 : L-mode
 
 # %%
-
 class model_waveform_class:
 
     def __init__(self, th00=30):

@@ -108,3 +108,44 @@ for i in nums:
 # %%
 data.lsm[39]
 # %%
+
+
+# %%
+
+file_name = '/Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/20170714024908kpara_LASVD_ma3_mask.tplot'
+pytplot.tplot_restore(file_name)
+pytplot.options('kpara_LASVD_ma3_mask', option='spec', value=1)
+# pytplot.tplot('kpara_LASVD_ma3_mask')
+
+kpara_data = pytplot.get_data('kpara_LASVD_ma3_mask')
+lam = calc_lsm_from_kpara(kpara_data.times,kpara_data.y,kpara_data.v,'2017-07-14/02:52:17',10,str([2.,3.,4.,5.]))
+print(lam)
+
+# %%
+
+
+# %%
+
+file_name = '/Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/20180606112500kpara_LASVD_ma3_mask.tplot'
+pytplot.tplot_restore(file_name)
+pytplot.options('kpara_LASVD_ma3_mask', option='spec', value=1)
+# pytplot.tplot('kpara_LASVD_ma3_mask')
+
+kpara_data = pytplot.get_data('kpara_LASVD_ma3_mask')
+lam = calc_lsm_from_kpara(kpara_data.times,kpara_data.y,kpara_data.v,'2018-06-06/11:32:29',3,str([3., 4., 5., 6., 7.]))
+print(lam)
+
+# %%
+
+
+file_name = '/Users/ampuku/Documents/duct/code/IDL/tplots/kpara_LASVD_ma3_mask_tplots/20170703043200kpara_mask.tplot'
+pytplot.tplot_restore(file_name)
+pytplot.options('kpara_mask', option='spec', value=1)
+# pytplot.tplot('kpara_LASVD_ma3_mask')
+
+kpara_data = pytplot.get_data('kpara_mask')
+lam = calc_lsm_from_kpara(kpara_data.times,kpara_data.y,kpara_data.v,'2017-07-03/04:32:32',45,str([5., 6., 7.,8.,9.]))
+print(lam)
+
+
+# %%

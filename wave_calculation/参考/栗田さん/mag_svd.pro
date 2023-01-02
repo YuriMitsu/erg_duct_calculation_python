@@ -1,6 +1,18 @@
-pro mag_svd_test,wna_inp=wna_inp,phi_inp=phi_inp
+; .compile '/Users/ampuku/Documents/duct/code/python/wave_calculation/参考/栗田さん/mag_svd.pro'
+; timespan, '2017-07-03/04:09:18', 1, /min
+; erg_load_pwe_wfc
+; get_data, 'erg_pwe_wfc_l2_b_65khz_Bx_waveform', data=datax
+; get_data, 'erg_pwe_wfc_l2_b_65khz_By_waveform', data=datay
+; get_data, 'erg_pwe_wfc_l2_b_65khz_Bz_waveform', data=dataz
+; store_data, 'bfield', data={x:datax.x, y:[[datax.y], [datay.y], [dataz.y]]}
+; mag_svd_test
 
-makewave,wna=wna_inp,phi=phi_inp
+; 座標系を変更してからデータを入れないといけない
+; 加藤先生ののデータは磁力線方向がz軸でとった系になっているはず！
+
+
+
+pro mag_svd_test,wna_inp=wna_inp,phi_inp=phi_inp
 
 get_data,'bfield',data=scw
 
@@ -16,7 +28,7 @@ if size(scw,/type) eq 8 then begin
         ndata=n_elements(scw.x)
         scw_fft=dcomplexarr(long(ndata-nfft)/stride+1,nfft,3)
         win=hanning(nfft,/double)*8/3.
-
+        
         i=0L
         for j=0L,ndata-nfft-1,stride do begin
             for k=0,2 do scw_fft[i,*,k]=fft(scw.y[j:j+nfft-1,k]*win)

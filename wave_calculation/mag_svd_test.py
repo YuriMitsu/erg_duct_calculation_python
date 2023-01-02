@@ -147,12 +147,12 @@ def mag_svd(time, data, nfft=8192, stride=4096, n_average=3):
         pytplot.store_data('waveangle_th_magsvd', data={'x': t_s, 'y': wna, 'v': freq})
         pytplot.store_data('waveangle_phi_magsvd', data={'x': t_s, 'y': phi, 'v': freq})
         pytplot.store_data('planarity_magsvd', data={'x': t_s, 'y': plan, 'v': freq})
-        # waveangle_th_magsvd = imitation_tplot(t_s, wna, freq)
-        # waveangle_phi_magsvd = imitation_tplot(t_s, phi, freq)
-        # planarity_magsvd = imitation_tplot(t_s, plan, freq)
+        waveangle_th_magsvd = imitation_tplot(t_s, wna, freq)
+        waveangle_phi_magsvd = imitation_tplot(t_s, phi, freq)
+        planarity_magsvd = imitation_tplot(t_s, plan, freq)
 
-        return
-        # return waveangle_th_magsvd, waveangle_phi_magsvd, planarity_magsvd
+        # return
+        return waveangle_th_magsvd, waveangle_phi_magsvd, planarity_magsvd
 
     else:
         print('データが入ってなかった...')

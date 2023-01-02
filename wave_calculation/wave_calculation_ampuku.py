@@ -2,18 +2,24 @@
 import pytplot
 import pyspedas as pys
 import numpy as np
-from model_waveform_01 import model_waveform_class
-from mag_svd_test import mag_svd
+import model_waveform_01 as model
+import mag_svd_test as svd
+import importlib
 
 
 # %%
-model1 = model_waveform_class(th00=20)
-model2 = model_waveform_class(th00=40)
+# モジュールの再読み込み : モジュール内を書き換えた時は実行
+# importlib.reload(model)
+# importlib.reload(svd)
+
+# %%
+model1 = model.model_waveform_class(th00=20)
+model2 = model.model_waveform_class(th00=40)
 
 model12_eb = model1.eb + model2.eb
 model12_eb = np.transpose(model12_eb)
 
-waveangle_th_magsvd, waveangle_phi_magsvd, planarity_magsvd = mag_svd(model1.times, model12_eb)
+waveangle_th_magsvd, waveangle_phi_magsvd, planarity_magsvd = svd.mag_svd(model1.times, model12_eb)
 
 
 # %%
@@ -46,3 +52,5 @@ pytplot.tplot(['waveangle_th_magsvd', 'waveangle_phi_magsvd', 'planarity_magsvd'
 
 
 # %%
+
+
