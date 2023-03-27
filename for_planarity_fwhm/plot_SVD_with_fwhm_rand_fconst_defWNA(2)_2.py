@@ -1,6 +1,6 @@
 #
 
-# M論の5_1作成に使用
+# M論の5_4作成に使用
 
 
 #  %%
@@ -27,6 +27,9 @@ def axplots(ax, df_all, x_input, x_expected=None):
 
 
 # %%
+dirc = '/Users/ampuku/Documents/duct/code/python/'
+
+# %%
 
 """
 波の数=4*n
@@ -37,7 +40,7 @@ f/fc=0.35, theta_g=45.6
 
 """
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi0360_wave4_phi = pd.read_csv(path+'wna45_phi0360_wave4_phi.csv', header=0)  # .transpose()
 wna40to50_phi0360_wave12_phi = pd.read_csv(path+'wna40to50_phi0360_wave12_phi.csv', header=0)  # .transpose()
 wna25to55_phi0360_wave28_phi = pd.read_csv(path+'wna25to55_phi0360_wave28_phi.csv', header=0)  # .transpose()
@@ -50,7 +53,7 @@ freq = np.array(list(map(float, wna45_phi0360_wave4_phi.columns.tolist())))
 names_phi = [wna45_phi0360_wave4_phi, wna40to50_phi0360_wave12_phi, wna25to55_phi0360_wave28_phi, wna0to60_phi0360_wave52_phi]
 
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi0360_wave4_theta = pd.read_csv(path+'wna45_phi0360_wave4_theta.csv', header=0)  # .transpose()
 wna40to50_phi0360_wave12_theta = pd.read_csv(path+'wna40to50_phi0360_wave12_theta.csv', header=0)  # .transpose()
 wna25to55_phi0360_wave28_theta = pd.read_csv(path+'wna25to55_phi0360_wave28_theta.csv', header=0)  # .transpose()
@@ -63,7 +66,7 @@ freq = np.array(list(map(float, wna45_phi0360_wave4_theta.columns.tolist())))
 names_theta = [wna45_phi0360_wave4_theta, wna40to50_phi0360_wave12_theta, wna25to55_phi0360_wave28_theta, wna0to60_phi0360_wave52_theta]
 
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi0360_wave4_pla = pd.read_csv(path+'wna45_phi0360_wave4_pla.csv', header=0)  # .transpose()
 wna40to50_phi0360_wave12_pla = pd.read_csv(path+'wna40to50_phi0360_wave12_pla.csv', header=0)  # .transpose()
 wna25to55_phi0360_wave28_pla = pd.read_csv(path+'wna25to55_phi0360_wave28_pla.csv', header=0)  # .transpose()
@@ -131,7 +134,7 @@ f/fc=0.35, theta_g=45.6
 """
 
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi060_wave4_phi = pd.read_csv(path+'wna45_phi060_wave4_phi.csv', header=0)  # .transpose()
 wna40to50_phi060_wave12_phi = pd.read_csv(path+'wna40to50_phi060_wave12_phi.csv', header=0)  # .transpose()
 wna25to55_phi060_wave28_phi = pd.read_csv(path+'wna25to55_phi060_wave28_phi.csv', header=0)  # .transpose()
@@ -144,7 +147,7 @@ freq = np.array(list(map(float, wna45_phi060_wave4_phi.columns.tolist())))
 names_phi = [wna45_phi060_wave4_phi, wna40to50_phi060_wave12_phi, wna25to55_phi060_wave28_phi, wna0to60_phi060_wave52_phi]
 
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi060_wave4_theta = pd.read_csv(path+'wna45_phi060_wave4_theta.csv', header=0)  # .transpose()
 wna40to50_phi060_wave12_theta = pd.read_csv(path+'wna40to50_phi060_wave12_theta.csv', header=0)  # .transpose()
 wna25to55_phi060_wave28_theta = pd.read_csv(path+'wna25to55_phi060_wave28_theta.csv', header=0)  # .transpose()
@@ -157,7 +160,7 @@ freq = np.array(list(map(float, wna45_phi060_wave4_theta.columns.tolist())))
 names_theta = [wna45_phi060_wave4_theta, wna40to50_phi060_wave12_theta, wna25to55_phi060_wave28_theta, wna0to60_phi060_wave52_theta]
 
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi060_wave4_pla = pd.read_csv(path+'wna45_phi060_wave4_pla.csv', header=0)  # .transpose()
 wna40to50_phi060_wave12_pla = pd.read_csv(path+'wna40to50_phi060_wave12_pla.csv', header=0)  # .transpose()
 wna25to55_phi060_wave28_pla = pd.read_csv(path+'wna25to55_phi060_wave28_pla.csv', header=0)  # .transpose()
@@ -215,7 +218,7 @@ f/fc=0.35, theta_g=45.6
 
 """
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi0_wave4_phi = pd.read_csv(path+'wna45_phi0_wave4_phi.csv', header=0)  # .transpose()
 wna40to50_phi0_wave12_phi = pd.read_csv(path+'wna40to50_phi0_wave12_phi.csv', header=0)  # .transpose()
 wna25to55_phi0_wave28_phi = pd.read_csv(path+'wna25to55_phi0_wave28_phi.csv', header=0)  # .transpose()
@@ -228,7 +231,7 @@ freq = np.array(list(map(float, wna45_phi0_wave4_phi.columns.tolist())))
 names_phi = [wna45_phi0_wave4_phi, wna40to50_phi0_wave12_phi, wna25to55_phi0_wave28_phi, wna0to60_phi0_wave52_phi]
 
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi0_wave4_theta = pd.read_csv(path+'wna45_phi0_wave4_theta.csv', header=0)  # .transpose()
 wna40to50_phi0_wave12_theta = pd.read_csv(path+'wna40to50_phi0_wave12_theta.csv', header=0)  # .transpose()
 wna25to55_phi0_wave28_theta = pd.read_csv(path+'wna25to55_phi0_wave28_theta.csv', header=0)  # .transpose()
@@ -241,7 +244,7 @@ freq = np.array(list(map(float, wna45_phi0_wave4_theta.columns.tolist())))
 names_theta = [wna45_phi0_wave4_theta, wna40to50_phi0_wave12_theta, wna25to55_phi0_wave28_theta, wna0to60_phi0_wave52_theta]
 
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = dirc + 'for_planarity_fwhm/csv/rand_fconst_'
 wna45_phi0_wave4_pla = pd.read_csv(path+'wna45_phi0_wave4_pla.csv', header=0)  # .transpose()
 wna40to50_phi0_wave12_pla = pd.read_csv(path+'wna40to50_phi0_wave12_pla.csv', header=0)  # .transpose()
 wna25to55_phi0_wave28_pla = pd.read_csv(path+'wna25to55_phi0_wave28_pla.csv', header=0)  # .transpose()
