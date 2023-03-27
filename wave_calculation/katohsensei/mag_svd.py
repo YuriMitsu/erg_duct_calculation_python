@@ -47,9 +47,9 @@ def mag_svd(time, bx_waveform, by_waveform, bz_waveform, nfft=4096, stride=2048,
     i = 0
     t_s = []
     for j in range(0, ndata-nfft+1, stride):
-        scw_fft[i, :, 0] = np.fft.fft(bx_waveform[j:j+nfft] * win)[:int(nfft/2)]
-        scw_fft[i, :, 1] = np.fft.fft(by_waveform[j:j+nfft] * win)[:int(nfft/2)]
-        scw_fft[i, :, 2] = np.fft.fft(bz_waveform[j:j+nfft] * win)[:int(nfft/2)]
+        scw_fft[i, :, 0] = np.fft.fft(bx_waveform[j:j+nfft] * win)[:int(nfft/2)] / nfft * 2
+        scw_fft[i, :, 1] = np.fft.fft(by_waveform[j:j+nfft] * win)[:int(nfft/2)] / nfft * 2
+        scw_fft[i, :, 2] = np.fft.fft(bz_waveform[j:j+nfft] * win)[:int(nfft/2)] / nfft * 2
 
         i += 1
     t_s = time[0]+(np.arange(i-1)*stride+nfft/2) / fsamp
@@ -131,15 +131,14 @@ def mag_svd(time, bx_waveform, by_waveform, bz_waveform, nfft=4096, stride=2048,
     # if tplot == 0:
     #     bspec = data_form(time=t_s, y=scw_fft_tot, v=freq)
 
-    # if tplot == 1:
-    #     pytplot.store_data('bspec', data={'x': t_s, 'y': scw_fft_tot, 'v': freq})
-    #     pytplot.options('bspec', option='spec', value=3)
-    #     pytplot.options('bspec', option='ylog', value=1)
-    #     pytplot.options('bspec', option='yrange', value=[32, 20000])
-    #     pytplot.options('bspec', option='zlog', value=1)
-    #     # pytplot.options('bspec', option='zrange', value=[1e-4, 1e2])
-    #     pytplot.options('bspec', option='zrange', value=[1e2, 1e6])
-    #     pytplot.options('bspec', option='zsubtitle', value='pT^2/Hz')
+    if tplot == 1:
+        pytplot.store_data('bspec', data={'x': t_s, 'y': scw_fft_tot, 'v': freq})
+        pytplot.options('bspec', option='spec', value=3)
+        pytplot.options('bspec', option='ylog', value=1)
+        pytplot.options('bspec', option='yrange', value=[32, 20000])
+        pytplot.options('bspec', option='zlog', value=1)
+        pytplot.options('bspec', option='zrange', value=[1e-4, 1e2])
+        pytplot.options('bspec', option='zsubtitle', value='pT^2/Hz')
 
     if tplot == 0:
         waveangle_th_magsvd = data_form(t_s, wna, freq)
@@ -163,6 +162,28 @@ def mag_svd(time, bx_waveform, by_waveform, bz_waveform, nfft=4096, stride=2048,
         pytplot.options(['waveangle_th_magsvd', 'waveangle_phi_magsvd', 'polarization_magsvd',
                         'planarity_magsvd'], option='ysubtitle', value='frequency Hz')
         pytplot.options(['waveangle_th_magsvd', 'waveangle_phi_magsvd'], option='zsubtitle', value='degree')
+
+
+        wna[bspec>10e-2] = np.NaN
+        phi[bspec>10e-2] = np.NaN
+        planarity[bspec>10e-2] = np.NaN
+        polarization[bspec>10e-2] = np.NaN
+
+        pytplot.store_data('waveangle_th_magsvd_mask', data={'x': t_s, 'y': wna, 'v': freq})
+        pytplot.store_data('waveangle_phi_magsvd_mask', data={'x': t_s, 'y': phi, 'v': freq})
+        pytplot.store_data('planarity_magsvd_mask', data={'x': t_s, 'y': planarity, 'v': freq})
+        pytplot.store_data('polarization_magsvd_mask', data={'x': t_s, 'y': polarization, 'v': freq})
+
+        pytplot.options(['waveangle_th_magsvd_mask'], option='zrange', value=[0., 90.])
+        pytplot.options(['waveangle_phi_magsvd_mask'], option='zrange', value=[-180., 180.])
+        pytplot.options(['planarity_magsvd_mask'], option='zrange', value=[0., 1.])
+        pytplot.options(['polarization_magsvd_mask'], option='zrange', value=[-1., 1.])
+        pytplot.options(['waveangle_th_magsvd_mask', 'waveangle_phi_magsvd_mask', 'polarization_magsvd_mask', 'planarity_magsvd_mask'], option='spec', value=3)
+        pytplot.options(['waveangle_th_magsvd_mask', 'waveangle_phi_magsvd_mask', 'polarization_magsvd_mask',
+                        'planarity_magsvd_mask'], option='ysubtitle', value='frequency Hz')
+        pytplot.options(['waveangle_th_magsvd_mask', 'waveangle_phi_magsvd_mask'], option='zsubtitle', value='degree')
+
+
 
         return
 

@@ -58,18 +58,27 @@ SVD解析のパラメータ設定
 
 # %%
 # tplot=1　 　pytplotの形で出力
-mag_svd.mag_svd(time, bx_waveform, by_waveform, bz_waveform, nfft=4096, stride=2048, f_average=3, t_average=3, tplot=1)
-
+mag_svd.mag_svd(time, bx_waveform, by_waveform, bz_waveform, nfft=1024, stride=1024, f_average=3, t_average=3, tplot=1)
 
 # %%
 # pytplotで表示
 pytplot.timespan('2017-07-03 04:32:00', 55,  keyword='minute')
 
+# %%
 pytplot.options(['bspec', 'waveangle_th_magsvd', 'waveangle_phi_magsvd', 'polarization_magsvd', 'planarity_magsvd'], option='ylog', value=0)
-pytplot.options(['bspec', 'waveangle_th_magsvd', 'waveangle_phi_magsvd', 'polarization_magsvd', 'planarity_magsvd'], option='yrange', value=[2000, 9000])
+pytplot.options(['bspec', 'waveangle_th_magsvd', 'waveangle_phi_magsvd', 'polarization_magsvd', 'planarity_magsvd'], option='yrange', value=[2000, 10000])
 pytplot.tplot(['bspec', 'waveangle_th_magsvd', 'waveangle_phi_magsvd', 'polarization_magsvd', 'planarity_magsvd'], save_png='test_fig')
 
 
 # %%
+pytplot.options(['bspec', 'waveangle_th_magsvd_mask', 'waveangle_phi_magsvd_mask', 'polarization_magsvd_mask', 'planarity_magsvd_mask'], option='ylog', value=0)
+pytplot.options(['bspec', 'waveangle_th_magsvd_mask', 'waveangle_phi_magsvd_mask', 'polarization_magsvd_mask', 'planarity_magsvd_mask'], option='yrange', value=[2000, 10000])
+pytplot.tplot(['bspec', 'waveangle_th_magsvd_mask', 'waveangle_phi_magsvd_mask', 'polarization_magsvd_mask', 'planarity_magsvd_mask'], save_png='test_fig')
+
+
+# %%
+# メモ
+
+# pytplot.store_data('waveangle_th_magsvd', data={'x': time, 'y': bspec, 'v': freq})
 
 

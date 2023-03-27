@@ -298,7 +298,7 @@ f/fc=0.2, theta_g=66.4
 
 """
 
-path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_fconst_'
+path = '/Users/ampuku/Documents/duct/code/python/for_planarity_fwhm/csv/rand_'
 wna5_phi0_wave8_phi = pd.read_csv(path+'wna5_phi0_wave8_phi.csv', header=0)#.transpose()
 wna15_phi0_wave8_phi = pd.read_csv(path+'wna15_phi0_wave8_phi.csv', header=0)#.transpose()
 wna25_phi0_wave8_phi = pd.read_csv(path+'wna25_phi0_wave8_phi.csv', header=0)#.transpose()
