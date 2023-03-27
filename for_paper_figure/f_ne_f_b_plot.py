@@ -70,7 +70,7 @@ ax2.vlines(fce_eq, -0.1, 0.2, colors='k', linestyle='dotted', linewidth=2)
 
 fig.tight_layout()
 
-fig.savefig('/Users/ampuku/Documents/duct/Fig/_paper_figure/f_Ne_f_B_plot1.png', dpi=300)
+# fig.savefig('/Users/ampuku/Documents/duct/Fig/_paper_figure/f_Ne_f_B_plot1.png', dpi=300)
 
 
 
@@ -156,7 +156,7 @@ ax4.vlines(fce_eq, -0.1, 0.2, colors='k', linestyle='dotted', linewidth=2)
 
 fig.tight_layout()
 
-fig.savefig('/Users/ampuku/Documents/duct/Fig/_paper_figure/f_Ne_f_B_plot2.png', dpi=300)
+# fig.savefig('/Users/ampuku/Documents/duct/Fig/_paper_figure/f_Ne_f_B_plot2.png', dpi=300)
 
 
 
@@ -233,7 +233,7 @@ ax6.vlines(fce_eq, -0.1, 0.2, colors='k', linestyle='dotted', linewidth=2)
 
 fig.tight_layout()
 
-fig.savefig('/Users/ampuku/Documents/duct/Fig/_paper_figure/f_Ne_f_B_plot3.png', dpi=300)
+# fig.savefig('/Users/ampuku/Documents/duct/Fig/_paper_figure/f_Ne_f_B_plot3.png', dpi=300)
 
 # %%
 
